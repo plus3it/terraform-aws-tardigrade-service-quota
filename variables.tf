@@ -1,7 +1,7 @@
 variable "service_quota" {
   description = "Object of attributes for the AWS Service Quota"
   type = object({
-    value        = string
+    value        = number
     service_code = string
     quota_code   = optional(string)
     quota_name   = optional(string)
