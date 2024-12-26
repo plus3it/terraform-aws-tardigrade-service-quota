@@ -8,10 +8,18 @@ variable "service_quota" {
   })
 
   validation {
-    condition = can(
+    condition = anytrue([
       var.service_quota.quota_code != null,
       var.service_quota.quota_name != null,
-    )
-    error_message = "Either `quota_code` or `quota_name` must be provided"
+    ])
+    error_message = "Either `quota_code` or `quota_name` must be provided."
+  }
+
+  validation {
+    condition = !alltrue([
+      var.service_quota.quota_code != null,
+      var.service_quota.quota_name != null,
+    ])
+    error_message = "Provide only one of `quota_code` or `quota_name`."
   }
 }
