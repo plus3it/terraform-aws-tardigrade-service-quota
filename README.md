@@ -26,7 +26,7 @@ Terraform module to manage an AWS Service Quota
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_service_quota"></a> [service\_quota](#input\_service\_quota) | Object of attributes for the AWS Service Quota | <pre>object({<br>    value        = number<br>    service_code = string<br>    quota_code   = optional(string)<br>    quota_name   = optional(string)<br>  })</pre> | n/a | yes |
+| <a name="input_service_quota"></a> [service\_quota](#input\_service\_quota) | Object of attributes for the AWS Service Quota | <pre>object({<br/>    value        = number<br/>    service_code = string<br/>    quota_code   = optional(string)<br/>    quota_name   = optional(string)<br/>  })</pre> | n/a | yes |
 
 ## Outputs
 
